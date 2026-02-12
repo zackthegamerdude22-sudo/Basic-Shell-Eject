@@ -11,7 +11,7 @@ local ShellTemplates = {
 	["Glock-19"] = ReplicatedStorage.BulletShells["Glock-19"]:WaitForChild("Shell"),
 	["AK-47"] = ReplicatedStorage.BulletShells["AK-47"]:WaitForChild("BulletShell"),
 }
-local function ejectShell(gunTool, shellTemplate, delayTime)
+local function ejectShell(player, gunTool, shellTemplate, delayTime)
 	if delayTime then
 		task.wait(delayTime)
 	end
