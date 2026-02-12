@@ -11,7 +11,7 @@ local ShellTemplates = {
 	["Glock-19"] = ReplicatedStorage.BulletShells["Glock-19"]:WaitForChild("Shell"),
 	["AK-47"] = ReplicatedStorage.BulletShells["AK-47"]:WaitForChild("BulletShell"),
 }
-local function ejectShell(player, gunTool, shellTemplate, delayTime)
+local function ejectShell(gunTool, shellTemplate, delayTime)
 	if delayTime then
 		task.wait(delayTime)
 	end
@@ -55,9 +55,6 @@ local function ejectShell(player, gunTool, shellTemplate, delayTime)
 			eject.CFrame.RightVector * 15 + Vector3.new(0, 20, 0)
 		shell.AssemblyAngularVelocity =
 			Vector3.new(math.random(), math.random(), math.random()) * 20
-	end
-
-	if player.Character and player.Character.PrimaryPart then
 	end
 
 	Debris:AddItem(shell, 5)
